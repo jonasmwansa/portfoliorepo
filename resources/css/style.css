@@ -30,6 +30,49 @@ html, body {
 }
 
 
+.navbar-nav{
+  margin:7.5px -15px;
+}
+
+
+.navbar-nav > a:hover,
+.nav > a:hover {
+  background-color: transparent;
+  border-bottom: 2px solid #212121;
+}
+
+.nav > a:focus {
+  background-color: transparent;
+}
+
+.navbar-toggle{
+  position:relative;
+  float:right;
+  padding:9px 10px;
+  margin-top:8px;
+  margin-right:15px;
+  margin-bottom:8px;
+  background-color:transparent;
+  background-image:none;
+  border:1px solid transparent;
+  border-radius:4px;
+}
+
+.navbar-toggle:focus{
+  outline:0;
+}
+
+.navbar-toggle .icon-bar{
+  display:block;
+  width:22px;
+  height:2px;
+  border-radius:1px;
+}
+
+.navbar-toggle .icon-bar+.icon-bar{
+  margin-top:4px;
+}
+
 .navbar-nav > a {
     padding: 5px 0;
     margin-left: 40px;
@@ -44,48 +87,7 @@ html, body {
     -ms-transition: border-color 0.25s ease-in-out;
 }
 
-.navbar-nav{
-    margin:7.5px -15px;
-}
 
-
-.navbar-nav > a:hover,
-.nav > a:hover {
-    background-color: transparent;
-    border-bottom: 2px solid #212121;
-}
-
-.nav > a:focus {
-    background-color: transparent;
-}
-
-.navbar-toggle{
-    position:relative;
-    float:right;
-    padding:9px 10px;
-    margin-top:8px;
-    margin-right:15px;
-    margin-bottom:8px;
-    background-color:transparent;
-    background-image:none;
-    border:1px solid transparent;
-    border-radius:4px;
-}
-
-.navbar-toggle:focus{
-    outline:0;
-}
-
-.navbar-toggle .icon-bar{
-    display:block;
-    width:22px;
-    height:2px;
-    border-radius:1px;
-}
-
-.navbar-toggle .icon-bar+.icon-bar{
-    margin-top:4px;
-}
 
 @media (min-width:768px){
     .navbar-toggle{
@@ -95,22 +97,32 @@ html, body {
 
 
 .introduction-section{
-    /* background: url(../images/background.jpg);
-    background-size: cover; */
-    margin-bottom: 1rem; 
+
+    margin-bottom: 1rem;
+    position:relative;
+    overflow:hidden;
   }
 
 
-  .introduction-section .col-sm-12 {
-    text-align: center;
+  .introduction-section .message{
+    position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  color: white;
 
-}  
+  }
+  .introduction-section .message h3{
+    font-size: 4rem;
+  }
 
+  .introduction-section .message h5{
+    font-size: 2.5rem;
+  }
 
-
-  /* .introduction-section .col-md-6, .introduction-section .col-lg-6{
-    margin-top: 1.5rem;
-  } */
+  .introduction-section .message p{
+    font-size: 1.5rem;
+  }
 
 
   .container .text-center{
@@ -126,43 +138,12 @@ html, body {
     text-align:left;
   }
 
-
   
 .introduction-section img{
     width: 100%;
-    height: auto;
-    z-index: -1;
+    height: 100%;
 
 }
-
-.page-scroll {
-    font-size: 200px;
-    position: relative;
-    top: -300px;
-    float: right;
-    width: 50%;
-
-}
-
-.hidden {
-  opacity:0;
-}
-.console-container {
- 
-    padding: 20px;
-    font-family:Khula;
-    font-size:1.5rem;
-    display:flex;
-    color:white;
-    margin:auto;
-}
-
-.console-underscore {
-    display:inline-block;
-    position:relative;
-    top:auto;
-    left:auto;
-}  
 
 
 .visible-xxs {
@@ -397,9 +378,9 @@ overflow: hidden;
 
 .footer-section{
     text-align: center;
-    height: 100px;
-    line-height: 100px;
+    justify-content: center;
     background-color: rgba(24, 101, 163, 0.979);
+    display: flex;
 }
 
 /* some animations */
@@ -455,10 +436,35 @@ overflow: hidden;
   }
   
 
-
-/*==========  Non-Mobile First Method  ==========*/
-
 /* Large Devices, Wide Screens */
+
+@media only screen and (min-width: 2560px){
+
+  
+  .introduction-section .message{
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: white;
+
+  }
+  .introduction-section .message h3{
+    font-size: 5rem;
+    margin-bottom: 16px;
+  }
+
+  .introduction-section .message h5{
+    font-size: 3rem;
+    margin-bottom: 16px;
+  }
+
+  .introduction-section .message p{
+    font-size: 2rem;
+  }
+}
+
+
 @media only screen and (min-width : 1200px) {
 	
 	/* Navigation */
@@ -478,23 +484,6 @@ overflow: hidden;
 }
 
 
-
-
-@media only screen and (max-width : 768px) {
-	
-    .services-section .col-md-6{
-        background-color:#c6c6c6;
-        padding: 15px;
-        max-width: 40%;
-        margin:20px;
-        border-radius: 5px;
-        /* box-shadow: 0px 0px 40px 8px rgba(36, 34, 34, 0.2); */
-    }
-
-}
-
-
-
 @media only screen and (max-width : 1199px) {
 	
 	/* Navigation */
@@ -512,38 +501,6 @@ overflow: hidden;
     }
 
 }
-
-
-
-
-@media only screen and (max-width : 768px) {
-	
-    .services-section .col-md-6{
-        background-color:#c6c6c6;
-        padding: 15px;
-        max-width: 40%;
-        margin:20px;
-        border-radius: 5px;
-        /* box-shadow: 0px 0px 40px 8px rgba(36, 34, 34, 0.2); */
-    }
-
-}
-
-@media only screen and (max-width : 550px) {
-	
-    .services-section .col-sm-12{
-        background-color:#c6c6c6;
-        padding: 15px;
-        max-width: 90%;
-        margin:20px;
-        border-radius: 5px;
-        /* box-shadow: 0px 0px 40px 8px rgba(36, 34, 34, 0.2); */
-    }
-
-}
-
-
-
 
 
 
@@ -613,10 +570,105 @@ overflow: hidden;
 }
 
 
-@media only screen and (max-width: 768){
+
+@media only screen and (max-width : 768px) {
+	
+    .services-section .col-md-6{
+        background-color:#c6c6c6;
+        padding: 15px;
+        max-width: 40%;
+        margin:20px;
+        border-radius: 5px;
+    }
+
     #home .intro{
-        height: 90vh;
-      }
+      height: auto;
+    }
+
+    .introduction-section .message{
+      position: absolute;
+      top: 40%;
+      left: 40%;
+      transform: translate(-50%, -50%);
+      color: white;
+  
+    }
+  
+    .introduction-section .message h3{
+      font-size: 30px;
+    }
+    .introduction-section .message h5{
+      font-size: 20px;
+    }
+  
+    .introduction-section .message p{
+      font-size: 18px;
+    }
+  
+
+}
+
+@media only screen and (max-width : 550px) {
+	
+  .introduction-section .message{
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: white;
+
+  }
+
+  .introduction-section .message h3{
+    font-size: 25px;
+  }
+  .introduction-section .message h5{
+    font-size: 16px;
+  }
+
+  .introduction-section .message p{
+    font-size: 12px;
+  }
+
+    .services-section .col-sm-12{
+        background-color:#c6c6c6;
+        padding: 15px;
+        max-width: 90%;
+        margin:20px;
+        border-radius: 5px;
+        /* box-shadow: 0px 0px 40px 8px rgba(36, 34, 34, 0.2); */
+    }
+
+}
+
+
+
+@media only screen and (max-width: 320px){
+
+  .introduction-section .message{
+    position: absolute;
+    top: 52%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    color: white;
+
+  }
+
+  .introduction-section .message h3{
+    font-size: 16px;
+  }
+  .introduction-section .message h5{
+    font-size: 12px;
+  }
+
+  .introduction-section .message p{
+    font-size: 12px;
+  }
+
+  footer{
+    font-size: 16px;
+  }
+
 }
 
 
