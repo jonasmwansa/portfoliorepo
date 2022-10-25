@@ -346,7 +346,8 @@ h4 {
 
 .btn-fill:hover,
 .btn-fill:focus {
-    color: #fff;
+  color: #fff;
+    background-color: #0f4f83;
 }
 
 .btn:hover,
